@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/searchpanel"
+        android:padding="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/search_layoyt_height">
+
+        <EditText
+            android:id="@+id/edittext"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/search_layoyt_height"
+            android:hint="@string/edittext_hint_msg"
+            android:textSize="@dimen/edittext_search_tesxt_size"
+            android:gravity="center"/>
+        <ImageView
+            android:id="@+id/imageview_search"
+            android:src="@drawable/search_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/search_layoyt_height"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/choice"
+        android:layout_below="@id/searchpanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_margin="5dp"
+                android:id="@+id/radio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/movie"
+                android:checked="true"/>
+            <RadioButton
+                android:layout_margin="5dp"
+                android:id="@+id/radio2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/serial"
+                />
+
+        </RadioGroup>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_below="@id/choice"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+    <TextView
+        android:layout_below="@id/choice"
+        android:id="@+id/textview_noitem_found"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:visibility="gone"/>
+
+</RelativeLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">DemoMoviewFinderForCube</string>
+    <string name="activity_title">Movie Finder</string>
+    <string name="edittext_hint_msg">search</string>
+    <string name="title">Title: </string>
+    <string name="genre">Genre: </string>
+    <string name="date">Release date: </string>
+    <string name="plot">Plot: \n</string>
+    <string name="error">Error!!</string>
+    <string name="textview_no_item_found">No item found!!</string>
+    <string name="serial">Serial</string>
+    <string name="movie">Movie</string>
+</resources>
